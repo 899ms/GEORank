@@ -114,8 +114,8 @@ export default {
     },
     home: {
       eyebrow: 'Frontline GEO Radar',
-      title: '今日精选 GEO 势力',
-      subtitle: '追踪生成式人工智能搜索引擎优化领域的顶尖创新者与方法论。2.0 首页先复用现有业务数据口径，在不改变业务逻辑的前提下迁移公开首页。',
+      title: '今日公司推荐',
+      subtitle: '发现值得关注的 GEO 公司与行业实践。',
       publicCompanies: '{count} 家公开公司',
       tutorialResources: '{count} 篇教程资源',
       popularCompanies: '{count} 家热门公司',

@@ -63,3 +63,11 @@ test('the Next migration layer does not render the company directory at the root
   assert.doesNotMatch(homePage, /LegacyStaticPage|page="index"/);
   assert.match(companiesPage, /LegacyStaticPage page="index"/);
 });
+
+test('the company directory keeps page-specific hero copy', async () => {
+  const companyDirectory = await read('dist/index.html');
+
+  assert.match(companyDirectory, />今日公司推荐<\/h1>/);
+  assert.match(companyDirectory, />发现值得关注的 GEO 公司与行业实践。<\/p>/);
+  assert.doesNotMatch(companyDirectory, /<p[^>]*data-site-description[^>]*>发现值得关注的 GEO 公司与行业实践。<\/p>/);
+});
